@@ -2,21 +2,21 @@
 {%block title%}Mentees{%endblock%}
 
 {%block content%}
-Mentors
+<h2 class="aligncenter font-weight-bold">Mentees</h2>
 <br>
-<div class=container-fluid>
+<div class=container>
         {% for mentee in list_mentee %}
-        <div class="row">
+        <div class="row justify-content-center">
             <div class="col-md-4">
                 <div class="mentee-picture">
                         <img src="{{mentee.gambar}}">
                 </div>
             </div>
             <div class="col-md-8">
-                <div class="row">
+                <div class="row justify-content-center">
                     <div class="col-md-8">
                         <div class="mentee-name">
-                            {{mentee.nama}}
+                           <h5 class="font-weight-bold"> {{mentee.nama}}</h5>
                         </div>
                     </div>
                     <div class="col-md-8">
@@ -31,4 +31,4 @@ Mentors
         {%endfor%}
 </div>
 
-{%endblock%}
+{%endblock%}<

@@ -27,5 +27,6 @@ class Blog(models.Model):
     judul=models.CharField(max_length=255)
     gambar=models.CharField(max_length=255)
     isi=models.TextField()
+    date =models.DateTimeField(auto_now=True)
     def __str__(self):
         return self.judul

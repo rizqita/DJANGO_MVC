@@ -15,14 +15,16 @@ body {
 }
 .header-name{
   margin-top: 15px;
+  font-size: x-large;
 }
 .header-text-big{
   text-align: center;
   text-align: center;
-  background-color: #40D0E0
+  background-color: #40D0E0;
+  font-size: xx-large;
 }
 .header-paragraph{
-  text-align: center;
+  text-align: center !important;
   background-color: #40D0E0
 }
 
@@ -52,11 +54,8 @@ height: 75%;
     margin: 0;
    padding-top: 49px;
 }
-.profile-picture img{
 
-  width: 75%;
-  height:75%;
-}
+
 .author-name p{
   text-align: left;
   float: left;
@@ -85,23 +84,6 @@ height: 75%;
 .logo-table td{
   padding: 30px;
 }
-.description{
-    font-size: 35px;
-    font-weight: 500;
-    color: #19345E;
-    margin: 10px;
-    height: 41px;
-
-}
-.btn-custom{
-    color: white;
-    background-color: #F47522;
-    border-radius: 23px;
-  padding: 9px 28px 11px 28px;
-}
-.button-fp{
-margin-top: 25px    ;
-}
 .footer{
     background-color: #40D0E0;
 }
@@ -115,6 +97,30 @@ margin-top: 25px    ;
 .row2 p{
   color: white;
   align-items: center;
+}
+.alignright p{
+  padding-left: 10px;
+}
+
+/* 
+untuk di blog
+*/
+.blog-picture img{
+  width: 75%;
+  height: 75%;
+  padding-left: 20px;
+}
+.blog-title{
+  font-size: 25px;
+}
+.blog-isi{
+  font-size: 15px;
+}
+.blog-picture img{
+  width: 500px;
+}
+.profile-picture img{
+  width:600px;
 }
 @media (max-width:992px) {
     .profile-picture{width: 100%; align-items: center;}

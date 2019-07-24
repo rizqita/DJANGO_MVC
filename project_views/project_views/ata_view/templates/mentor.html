@@ -2,9 +2,9 @@
 {%block title%}Mentors{%endblock%}
 
 {%block content%}
-Mentors
+<h2 class="aligncenter font-weight-bold">Our Mentors</h2>
 <br>
-<div class=container-fluid>
+<div class=container>
         {% for mentor in list_mentor %}
         <div class="row">
             <div class="col-md-4">
@@ -16,7 +16,13 @@ Mentors
                 <div class="row">
                     <div class="col-md-8">
                         <div class="mentor-name">
-                            {{mentor.nama}}
+                           <h5 class="font-weight-bold text-secondary"> {{mentor.nama}}
+                            </h5>
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="mentor-jabatan">
+                            <h6 class="font-weight-bold">{{mentor.jabatan}} ({{mentor.durasi}} years experience.)</h6>
                         </div>
                     </div>
                     <div class="col-md-8">
@@ -28,6 +34,7 @@ Mentors
             </div>
             
         </div>
+        <br>
         {%endfor%}
 </div>
 

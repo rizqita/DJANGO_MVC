@@ -1,50 +1,35 @@
-{%extends 'base/base_ata.html'%}
-{%block content%}
+{% extends 'base/base_ata.html' %}
 
-<div class=container-fluid>
-        {% for blog in list_blog %}
-    <div class="row picture">
-        <div class="col-md-2">
+{% block title %}Blog{% endblock %}
 
+{% block content %}
+{% for blog in list_blog %}
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-6">
+            <br>
+            <img src="{{blog.gambar}}" width="500" alt="">
+            <div class="row">
+                <div class="col-6">
+                    {{blog.date}}
+                </div>
+                <div class="col-6">
+                    {{b.comment_count}} comments
+                </div>
+            </div>
+            <h4>
+                {{blog.judul}}
+            </h4>
+            <p>
+                {{blog.isi|safe|truncatewords:"50"|linebreaks}}
+            </p>
+            <a href="">
+                Baca Selengkapnya....
+            </a>
+            <br>
+            <br>
         </div>
-        <div class="col-md-8">
-            <div class="blog-picture">
-                <img src="{{blog.gambar}}">
-            </div>
-        </div>
-        <div class="col-md-4">
-
-        </div>
     </div>
-    <div class="row title">
-            
-            <div class="col-md-2">
-    
-            </div>
-            <div class="col-md-8">
-                <div class="blog-title">
-                    {{blog.judul}}
-                </div>
-            </div>
-            <div class="col-md-4">
-    
-            </div>
-    </div>
-    <div class="row isi">
-            <div class="col-md-2">
-    
-                </div>
-                <div class="col-md-8">
-                    <div class="blog-isi">
-                        {{blog.isi}}
-                    </div>
-                </div>
-                <div class="col-md-4">
-        
-                </div>
-    </div>
-    </div>
-         {%endfor%}
 </div>
-
-{%endblock%}
+{% endfor %}
+{% endblock %}
